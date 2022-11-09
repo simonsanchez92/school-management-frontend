@@ -1,0 +1,11 @@
+form {
+  color: black;
+  width: 400px;
+  max-width: 100%;
+
+  background-color: #fff;
+}
+
+.login-form-inner {
+  padding: 20px;
+}
