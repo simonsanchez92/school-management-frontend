@@ -1,0 +1,20 @@
+.sidebar {
+  border: 1px solid blue;
+  width: 260px;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+}
+
+.sidebar-menu-container {
+  padding: 15px;
+}
+.sidebar-menu {
+  list-style-type: none;
+}
+
+.sidebar-menu li {
+  padding: 5px 15px;
+  display: flex;
+}

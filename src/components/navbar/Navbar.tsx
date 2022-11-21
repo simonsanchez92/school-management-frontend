@@ -3,33 +3,55 @@ import "./navbar.css";
 import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { BellIcon } from "../../assets/icons/BellIcon";
+import avatar from "../../assets/profile-pic.png";
+import logo from "../../assets/site-logo.png";
+
 const Navbar = () => {
   return (
-    <nav className="d-flex justify-content-between p-2">
+    <nav className="nav">
       <div className="nav-left">
-        <h3>School</h3>
+        <a href="#" className="nav-logo">
+          <img src={logo} alt="logo" className="site-logo" />
+        </a>
       </div>
+
       <div className="top-nav-search">
         <form className="form">
           <input className="form-control" type="text" placeholder="Search..." />
+          <button type="submit">
+            <BellIcon />
+          </button>
         </form>
       </div>
+
       <div className="nav-user-menu">
-        <ul className="list-group list-group-horizontal">
-          <li className="list-group-item">
-            <a href="#">
-              {" "}
-              <FontAwesomeIcon icon={faAddressBook} />
+        <ul className="nav-list">
+          <li className="">
+            <a href="#" className="header-nav-list-item">
+              <BellIcon />
             </a>
           </li>
-          <li className="list-group-item">
-            <a href="#">
-              {" "}
-              <FontAwesomeIcon icon={faAddressBook} />
+          <li className="l">
+            <a href="#" className="header-nav-list-item">
+              <BellIcon />
             </a>
           </li>
-          <li className="list-group-item">
-            <a href="#">User menu</a>
+          <li className="l">
+            <a href="#" className="header-nav-list-item">
+              <BellIcon />
+            </a>
+          </li>
+          <li className="dropdown">
+            <a href="#">
+              <span className="user-avatar">
+                <img src={avatar} alt="user avatar" width="30" />
+                <div className="user-info">
+                  <h6>Simon Sanchez</h6>
+                  <p>Administrator</p>
+                </div>
+              </span>
+            </a>
           </li>
         </ul>
       </div>
