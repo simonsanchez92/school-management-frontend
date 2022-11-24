@@ -12,9 +12,9 @@ const App = () => {
       <header className="header">
         <Navbar />
       </header>
-      <div className="row">
+      <div className="main-wrapper">
         <Sidebar />
-        <main className="page-wrapper col-10">
+        <main className="page-wrapper">
           <div className="page-inner">
             <div className="page-header">
               <h3 className="page-title">Welcome Admin!</h3>
@@ -29,28 +29,32 @@ const App = () => {
             </div>
             <div className="page-content">
               <div className="row">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <div className="col-xl-3 col-sm-6 col-12 d-flex">
+                  <Card />
+                </div>
+                <div className="col-xl-3 col-sm-6 col-12 d-flex">
+                  <Card />
+                </div>
+                <div className="col-xl-3 col-sm-6 col-12 d-flex">
+                  <Card />
+                </div>
+                <div className="col-xl-3 col-sm-6 col-12 d-flex">
+                  <Card />
+                </div>
               </div>
               <div className="row">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-              </div>
-              <div className="row">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-              </div>
-              <div className="row">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <div className="col-xl-3 col-sm-6 col-12 d-flex">
+                  <Card />
+                </div>
+                <div className="col-xl-3 col-sm-6 col-12 d-flex">
+                  <Card />
+                </div>
+                <div className="col-xl-3 col-sm-6 col-12 d-flex">
+                  <Card />
+                </div>
+                <div className="col-xl-3 col-sm-6 col-12 d-flex">
+                  <Card />
+                </div>
               </div>
             </div>
           </div>

@@ -5,10 +5,10 @@ import ArrowRight from "../../assets/icons/ArrowRight";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar col">
+    <aside className="bd-sidebar sidebar ">
       <div className="sidebar-menu-container">
         <span className="main-menu-title">Main Menu</span>
-        <ul className="sidebar-menu">
+        <ul className="sidebar-menu px-0">
           <li>
             <a href="#" className="active">
               <div className="link-content">
@@ -208,7 +208,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </aside>
   );
 };
 

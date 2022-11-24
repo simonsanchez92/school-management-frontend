@@ -9,7 +9,7 @@ import logo from "../../assets/site-logo.png";
 
 const Navbar = () => {
   return (
-    <nav className="navbar py-2  fixed-top navbar-light bg-light">
+    <nav className="navbar py-2  fixed-top navbar-light ">
       <div className="container-fluid">
         <div className="nav-left">
           <a href="#" className="navbar-brand">

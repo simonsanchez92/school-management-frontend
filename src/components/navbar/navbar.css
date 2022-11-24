@@ -1,8 +1,9 @@
 nav {
-  /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 80px;
+  background-color: #ffffff;
 }
 
 .nav-left {
