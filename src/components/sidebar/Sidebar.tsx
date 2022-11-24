@@ -5,7 +5,7 @@ import ArrowRight from "../../assets/icons/ArrowRight";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar col">
       <div className="sidebar-menu-container">
         <span className="main-menu-title">Main Menu</span>
         <ul className="sidebar-menu">

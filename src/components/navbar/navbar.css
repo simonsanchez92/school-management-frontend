@@ -21,7 +21,7 @@ form {
   position: relative;
   width: 300px;
 }
-form input {
+/* form input {
   background-color: #f5f5f5;
   height: 40px;
   padding: 10px 15px 10px 40px;
@@ -29,11 +29,11 @@ form input {
   color: #6c757d;
   border: 1px solid #d7d9de;
   width: 100%;
+} */
+form input.form-control:focus {
+  outline: none !important;
 }
-form input:focus {
-  outline: none;
-}
-form button {
+/* form button {
   background-color: transparent;
   padding: 7px 15px;
   position: absolute;
@@ -41,15 +41,16 @@ form button {
   top: 0;
   min-height: 40px;
   border: none;
+} */
+
+.submit-btn {
+  border-right: none !important;
 }
 
 .nav-user-menu {
   display: flex;
 }
-.nav-list {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .nav-list li {
   display: inline-block;
   margin-right: 15px;
@@ -64,13 +65,6 @@ form button {
   border-radius: 50px;
   background-color: #f5f5f5;
 }
-/* .header-nav-list-item {
-  border: 1px solid black;
-  border-radius: 50px;
-  width: 40px;
-  height: 40px;
-  background-color: #f7f7fa;
-} */
 
 .dropdown a {
   height: 60px;
