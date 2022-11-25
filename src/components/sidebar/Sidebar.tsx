@@ -30,7 +30,7 @@ const Sidebar = () => {
                 <i>
                   <BellIcon />
                 </i>
-                <span>Dashboard</span>
+                <span>Students</span>
               </div>
 
               <span className="menu-arrow">
@@ -44,7 +44,7 @@ const Sidebar = () => {
                 <i>
                   <BellIcon />
                 </i>
-                <span>Dashboard</span>
+                <span>Teachers</span>
               </div>
 
               <span className="menu-arrow">
@@ -58,7 +58,7 @@ const Sidebar = () => {
                 <i>
                   <BellIcon />
                 </i>
-                <span>Dashboard</span>
+                <span>Subjects</span>
               </div>
 
               <span className="menu-arrow">
