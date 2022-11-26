@@ -7,6 +7,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 
 import Card from "./components/card/Card";
 import AddStudent from "./components/student/add/AddStudent";
+import AddSubject from "./components/subject/add/AddSubject";
 
 const App = () => {
   return (
@@ -47,7 +48,8 @@ const App = () => {
                 </div>
               </div> */}
 
-            <AddStudent />
+            {/* <AddStudent /> */}
+            <AddSubject />
           </div>
         </main>
       </div>

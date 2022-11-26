@@ -30,8 +30,8 @@ const AddStudent = () => {
                       </h5>
                     </div>
 
-                    <div className="col-12 col-sm-4">
-                      <div className="form-group">
+                    <div className="col-12 col-sm-4 my-2">
+                      <div className="form-group d-flex flex-column align-items-start">
                         <label htmlFor="" className="form-label">
                           Name
                         </label>
@@ -42,70 +42,141 @@ const AddStudent = () => {
                         />
                       </div>
                     </div>
-                    <div className="col-12 col-sm-4">
-                      <div className="form-group">
+                    <div className="col-12 col-sm-4 my-2">
+                      <div className="form-group d-flex flex-column align-items-start">
                         <label htmlFor="" className="form-label">
-                          Name
+                          Surname
                         </label>
                         <input
                           type="text"
                           className="form-control"
-                          placeholder="name"
+                          placeholder="Surname"
                         />
                       </div>
                     </div>
-                    <div className="col-12 col-sm-4">
-                      <div className="form-group">
+                    <div className="col-12 col-sm-4 my-2">
+                      <div className="form-group d-flex flex-column align-items-start">
+                        <label
+                          className=" form-label"
+                          htmlFor="input-group-select-gender"
+                        >
+                          Gender
+                        </label>
+                        <select
+                          className="form-select"
+                          id="input-group-select-gender"
+                        >
+                          <option selected>Select Gender</option>
+                          <option value="1">Male</option>
+                          <option value="2">Female</option>
+                          <option value="3">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="col-12 col-sm-4 my-2">
+                      <div className="form-group d-flex flex-column align-items-start">
                         <label htmlFor="" className="form-label">
-                          Name
+                          Date of birth
+                        </label>
+                        <input type="date" className="form-control" />
+                      </div>
+                    </div>
+                    <div className="col-12 col-sm-4 my-2">
+                      <div className="form-group d-flex flex-column align-items-start">
+                        <label htmlFor="" className="form-label">
+                          Phone
                         </label>
                         <input
-                          type="text"
+                          type="tel"
                           className="form-control"
-                          placeholder="name"
+                          placeholder="15-xxx-xxx"
                         />
                       </div>
                     </div>
-                    <div className="col-12 col-sm-4">
-                      <div className="form-group">
+                    <div className="col-12 col-sm-4 my-2">
+                      <div className="form-group d-flex flex-column align-items-start">
                         <label htmlFor="" className="form-label">
-                          Name
+                          Email
                         </label>
                         <input
-                          type="text"
+                          type="email"
                           className="form-control"
-                          placeholder="name"
+                          placeholder="Email"
                         />
                       </div>
                     </div>
-                    <div className="col-12 col-sm-4">
-                      <div className="form-group">
+                    <div className="col-12 col-sm-4 my-2">
+                      <div className="form-group d-flex flex-column align-items-start">
                         <label htmlFor="" className="form-label">
-                          Name
+                          Address
                         </label>
                         <input
                           type="text"
                           className="form-control"
-                          placeholder="name"
+                          placeholder="Address"
                         />
                       </div>
                     </div>
-                    <div className="col-12 col-sm-4">
-                      <div className="form-group">
-                        <label htmlFor="" className="form-label">
-                          Name
+                    <div className="col-12 col-sm-4 my-2">
+                      <div className="form-group d-flex flex-column align-items-start">
+                        <label
+                          className=" form-label"
+                          htmlFor="input-group-select-gender"
+                        >
+                          Class
                         </label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="name"
-                        />
+                        <select
+                          className="form-select"
+                          id="input-group-select-gender"
+                        >
+                          <option selected>Select Class</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="col-12 col-sm-4 my-2">
+                      <div className="form-group d-flex flex-column align-items-start">
+                        <label
+                          className=" form-label"
+                          htmlFor="input-group-select-class"
+                        >
+                          Division
+                        </label>
+                        <select
+                          className="form-select"
+                          id="input-group-select-division"
+                        >
+                          <option selected>Select Division</option>
+                          <option value="A">A</option>
+                          <option value="B">B</option>
+                          <option value="C">C</option>
+                        </select>
                       </div>
                     </div>
 
-                    <div className="col-12">
-                      <div className="student-submit">
-                        <button className="btn btn-primary">Submit</button>
+                    <div className="col-12 col-sm-4 my-4">
+                      <div className="form-group d-flex flex-column align-items-start">
+                        {/* <label htmlFor="" className="form-label">
+                          Upload student photo
+                        </label> */}
+                        <div className="upload-photo-container">
+                          <input
+                            type="file"
+                            name="student-photo"
+                            id="student-photo-input"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-12 my-5">
+                      <div className="student-submit d-flex justify-start">
+                        <button className="btn btn-primary">Register</button>
                       </div>
                     </div>
                   </div>
