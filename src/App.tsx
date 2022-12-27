@@ -8,6 +8,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Card from "./components/card/Card";
 import AddStudent from "./components/student/add/AddStudent";
 import AddSubject from "./components/subject/add/AddSubject";
+import AddUser from "./components/users/AddUser";
 
 const App = () => {
   return (
@@ -48,7 +49,7 @@ const App = () => {
                 </div>
               </div> */}
 
-            <AddStudent />
+            <AddUser />
             {/* <AddSubject /> */}
           </div>
         </main>
