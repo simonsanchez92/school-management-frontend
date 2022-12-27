@@ -1,6 +1,58 @@
-import React from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 const AddStudent = () => {
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [dob, setDob] = useState("");
+  const [gender, setGender] = useState("Select Gender");
+  const [schoolClass, setSchoolClass] = useState("Select Class");
+  const [division, setDivision] = useState("Select Division");
+
+  const handleChangeName = (e: ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+  const handleChangeSurname = (e: ChangeEvent<HTMLInputElement>) => {
+    setSurname(e.target.value);
+  };
+  const handleChangePhone = (e: ChangeEvent<HTMLInputElement>) => {
+    setPhone(e.target.value);
+  };
+  const handleChangeEmail = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+  const handleChangeAddress = (e: ChangeEvent<HTMLInputElement>) => {
+    setAddress(e.target.value);
+  };
+
+  const handleChangeGender = (e: ChangeEvent<HTMLSelectElement>) => {
+    console.log(e.target.value);
+    setGender(e.target.value);
+  };
+
+  const handleChangeClass = (e: ChangeEvent<HTMLSelectElement>) => {
+    setSchoolClass(e.target.value);
+  };
+
+  const handleChangeDivision = (e: ChangeEvent<HTMLSelectElement>) => {
+    setDivision(e.target.value);
+  };
+
+  const handleChangeDob = (e: ChangeEvent<HTMLInputElement>) => {
+    if (Date.parse(e.target.value) > Date.now()) {
+      console.log("Cant use a date after today");
+      return;
+    }
+    setDob(e.target.value);
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(e);
+  };
+
   return (
     <div>
       <div className="page-header">
@@ -19,7 +71,7 @@ const AddStudent = () => {
           <div className="col-sm-12">
             <div className="card">
               <div className="card-body">
-                <form className="w-100">
+                <form className="w-100" onSubmit={(e) => handleSubmit(e)}>
                   <div className="row">
                     <div className="col-12 ">
                       <h5 className="form-title student-info d-flex justify-content-between mb-4">
@@ -36,6 +88,8 @@ const AddStudent = () => {
                           Name
                         </label>
                         <input
+                          value={name}
+                          onChange={(e) => handleChangeName(e)}
                           type="text"
                           className="form-control"
                           placeholder="name"
@@ -48,6 +102,8 @@ const AddStudent = () => {
                           Surname
                         </label>
                         <input
+                          value={surname}
+                          onChange={(e) => handleChangeSurname(e)}
                           type="text"
                           className="form-control"
                           placeholder="Surname"
@@ -65,11 +121,13 @@ const AddStudent = () => {
                         <select
                           className="form-select"
                           id="input-group-select-gender"
+                          value={gender}
+                          onChange={(e) => handleChangeGender(e)}
                         >
-                          <option selected>Select Gender</option>
-                          <option value="1">Male</option>
-                          <option value="2">Female</option>
-                          <option value="3">Other</option>
+                          <option value="Select Gender">Select Gender</option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Other">Other</option>
                         </select>
                       </div>
                     </div>
@@ -78,7 +136,13 @@ const AddStudent = () => {
                         <label htmlFor="" className="form-label">
                           Date of birth
                         </label>
-                        <input type="date" className="form-control" />
+                        <input
+                          value={dob}
+                          onChange={(e) => handleChangeDob(e)}
+                          id="dob-input"
+                          type="date"
+                          className="form-control"
+                        />
                       </div>
                     </div>
                     <div className="col-12 col-sm-4 my-2">
@@ -87,6 +151,8 @@ const AddStudent = () => {
                           Phone
                         </label>
                         <input
+                          value={phone}
+                          onChange={(e) => handleChangePhone(e)}
                           type="tel"
                           className="form-control"
                           placeholder="15-xxx-xxx"
@@ -99,6 +165,8 @@ const AddStudent = () => {
                           Email
                         </label>
                         <input
+                          value={email}
+                          onChange={(e) => handleChangeEmail(e)}
                           type="email"
                           className="form-control"
                           placeholder="Email"
@@ -111,6 +179,8 @@ const AddStudent = () => {
                           Address
                         </label>
                         <input
+                          value={address}
+                          onChange={(e) => handleChangeAddress(e)}
                           type="text"
                           className="form-control"
                           placeholder="Address"
@@ -128,8 +198,10 @@ const AddStudent = () => {
                         <select
                           className="form-select"
                           id="input-group-select-gender"
+                          value={schoolClass}
+                          onChange={(e) => handleChangeClass(e)}
                         >
-                          <option selected>Select Class</option>
+                          <option value="Select Class">Select Class</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -150,8 +222,12 @@ const AddStudent = () => {
                         <select
                           className="form-select"
                           id="input-group-select-division"
+                          value={division}
+                          onChange={(e) => handleChangeDivision(e)}
                         >
-                          <option selected>Select Division</option>
+                          <option value="Select Division">
+                            Select Division
+                          </option>
                           <option value="A">A</option>
                           <option value="B">B</option>
                           <option value="C">C</option>

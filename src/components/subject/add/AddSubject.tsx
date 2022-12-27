@@ -19,7 +19,13 @@ const AddSubject = (): JSX.Element => {
     setSubjectName(e.target.value);
   };
   const handleSchoolYear = (e: ChangeEvent<HTMLInputElement>) => {
-    setSchoolYear(+e.target.value);
+    if (+e.target.value > 5) {
+      return setSchoolYear(schoolYear);
+    }
+    if (e.target.value === "") {
+      console.log("ceroo");
+      return setSchoolYear(1);
+    }
   };
 
   const handleSubmit = (e: any) => {
@@ -60,6 +66,7 @@ const AddSubject = (): JSX.Element => {
                           type="text"
                           className="form-control"
                           placeholder="Subject ID"
+                          required
                           value={id}
                           onChange={(e) => handleId(e)}
                         />
@@ -74,6 +81,7 @@ const AddSubject = (): JSX.Element => {
                           type="text"
                           className="form-control"
                           placeholder="Subject Name"
+                          required
                           value={subjectName}
                           onChange={(e) => handleSubjectName(e)}
                         />
@@ -88,8 +96,8 @@ const AddSubject = (): JSX.Element => {
                           type="number"
                           className="form-control"
                           placeholder="School Year"
-                          min="1"
-                          max="5"
+                          min={1}
+                          max={5}
                           value={schoolYear}
                           onChange={(e) => handleSchoolYear(e)}
                         />
