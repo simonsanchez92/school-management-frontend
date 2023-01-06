@@ -1,4 +1,5 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import Home from "./components/home/Home";
 import Login from "./components/login/Login";
@@ -13,14 +14,16 @@ import AddUser from "./components/users/AddUser";
 const App = () => {
   return (
     <div className="App">
-      <header className="header">
-        <Navbar />
-      </header>
-      <div className="main-wrapper">
-        <Sidebar />
-        <main className="page-wrapper">
-          <div className="page-inner">
-            {/* <div className="row">
+      <div>
+        <header className="header">
+          <Navbar />
+        </header>
+
+        <div className="main-wrapper">
+          <Sidebar />
+          <main className="page-wrapper">
+            <div className="page-inner">
+              {/* <div className="row">
                 <div className="col-xl-3 col-sm-6 col-12 d-flex">
                   <Card />
                 </div>
@@ -49,10 +52,17 @@ const App = () => {
                 </div>
               </div> */}
 
-            <AddUser />
-            {/* <AddSubject /> */}
-          </div>
-        </main>
+              <BrowserRouter>
+                <Routes>
+                  <Route path="/la" element={<h2>lala</h2>} />
+                  <Route path={"/subjects/add"} element={<AddSubject />} />
+                  <Route path={"/users/add"} element={<AddUser />} />
+                  <Route path={"/students/add"} element={<AddStudent />} />
+                </Routes>
+              </BrowserRouter>
+            </div>
+          </main>
+        </div>
       </div>
     </div>
   );
